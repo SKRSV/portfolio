@@ -12,7 +12,9 @@ const Contact = ({ contactPageContent }: any) => {
 
   const title = contactPageContent.fields?.title || 'Name has been changed :C';
 
-  const subtitle = documentToHtmlString(contactPageContent.fields?.subtitle, {
+  const subtitle = documentToHtmlString(contactPageContent.fields?.subtitle, {});
+
+  const buttonText = documentToHtmlString(contactPageContent.fields?.buttonText, {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, next) => next(node.content),
     },
@@ -44,7 +46,15 @@ const Contact = ({ contactPageContent }: any) => {
           >
             <h1 className="h1">{title}</h1>
 
-            <p className="mb-12">{subtitle}</p>
+              {subtitle && (
+                  <div 
+                    className="mb-12" 
+                    dangerouslySetInnerHTML={{
+                      __html: subtitle,
+                    }} 
+                  />
+              )}
+
 
             <SendContactForm />
 

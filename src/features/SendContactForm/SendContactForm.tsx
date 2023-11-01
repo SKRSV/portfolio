@@ -10,9 +10,9 @@ export const SendContactForm = () => {
     try {
       await postContactForm(values);
 
-      successNotification('🦄 The message was successfully sent');
+      successNotification('🦄 Повідомлення успішно відправлене');
     } catch (error) {
-      errorNotification('Something went wrong with sending email');
+      errorNotification('Упс... Щось пішло не так');
     }
   };
 
