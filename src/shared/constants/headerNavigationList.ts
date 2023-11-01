@@ -1,18 +1,18 @@
 export const headerNavigationList = [
 	{
 		path: '/',
-		name: 'Home'
+		name: 'Домашня'
 	},
 	{
 		path: '/about',
-		name: 'About'
+		name: 'Про себе'
 	},
 	{
 		path: '/contact',
-		name: 'Contact'
+		name: 'Контакти'
 	},
 	{
 		path: '/portfolio',
-		name: 'Portfolio'
+		name: 'Портфоліо'
 	}
 ]
