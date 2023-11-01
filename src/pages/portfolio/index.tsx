@@ -143,9 +143,9 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       headerContent: headerContent ?? null,
-      portfolioPageContent: portfolioPage ?? null,
+      portfolioPageContent: portfolioPageContent ?? null,
       videosContent: videosContent ?? null,
     },
-    revalidate: 3600,
+    revalidate: 10,
   };
 };
